@@ -3,10 +3,6 @@ select f.id, f.name, f.md5, f.size, f.parentid, d.name
 from files f 
 join directory d on f.parentid = d.id 
 left join frame i on f.md5 = i.filemd5 where i.filemd5 is null;
---20060518_1617 only have thumbs for orig, need for mkv
---20061020_2040 same
---20000419_1128 frames are pngs
---20020513_1716 asx file is an error
 
 --include grandparent to more easily filter out clips
 select f.id, f.name, f.md5, f.size, f.parentid, d.name, gp.name 
@@ -14,7 +10,7 @@ from files f
 join directory d on f.parentid = d.id 
 join directory p on d.parent = p.id
 join directory gp on p.parent = gp.id
-left join frame i on f.md5 = i.filemd5 where i.filemd5 is null;--does this exclude the non-clips above?
+left join frame i on f.md5 = i.filemd5 where i.filemd5 is null;
 
 --frames that have no file - should be 0
 select * 
