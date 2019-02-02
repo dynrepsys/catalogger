@@ -1,0 +1,7 @@
+<div>
+    <span style="color:{{opColor()}};border-bottom:solid 2px {{errColor()}};" title="{{[errors.join(),warnings.join()].join('\n')}}">{{name}}</span>
+    <span *ngIf="id" style="">@{{id}}</span>
+    <span *ngIf="md5">#{{md5}}</span>
+    <span style="font-style:italic">@{{parentid}}</span>
+</div>
+

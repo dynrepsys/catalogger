@@ -1,0 +1,22 @@
+<div>
+    <div (click)="toggleSign()" title="{{warnings}}">
+        <span class="glyphicon glyphicon-{{sign}}"></span>
+        <span style="color:{{opColor()}};border-bottom:solid 2px {{errColor()}};">{{name}}</span>
+        <span *ngIf="id">@{{id}}</span>
+        <span *ngIf="parentid" style="font-style:italic">@{{parentid}}</span> 
+        <span style="color:red" *ngIf="numErrors>0">{{numErrors}}</span>
+        <span style="color:gold" *ngIf="numWarnings>0">{{numWarnings}}</span>
+        <span style="color:green" *ngIf="numInserts>0">{{numInserts}}</span>
+        <span style="color:blue" *ngIf="numUpdates>0">{{numUpdates}}</span>
+        <span style="color:darkorange" *ngIf="numCopies>0">{{numCopies}}</span>
+        <span style="color:gray" *ngIf="md5" style="font-style:italic">#{{md5}}</span>
+    </div>
+    <div style="margin-left:19px;display:{{(sign=='minus'?'block':'none')}}">
+        <dir *ngFor="#d of dirs" [mydir]="d"></dir>
+        <fil *ngFor="#f of files" [myfile]="f"></fil>
+        <div>
+            <span *ngFor="#f of frames" style="color:{{(f.fsop == 'ERROR' ? 'red' : (f.fsop == 'COPY' ? 'darkorange' : 'silver'))}};xdisplay:none;" title="{{f.errors}}">{{f.name}} </span>
+        </div>
+    </div>
+</div>
+
