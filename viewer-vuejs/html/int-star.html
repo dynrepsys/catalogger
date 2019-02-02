@@ -1,0 +1,12 @@
+<div class="row star" :class="{ sel: star.isSel, linked: star.isLinked }" @click="select(star.id, $event)">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-5 star-name">{{star.name}}
+        <a :href="extlink" target="_blank" v-if="star.i_perfid">
+            <span class="glyphicon glyphicon-new-window" style="font-size:.6em;color:#C0C0C0"></span>
+        </a>
+    </div>
+    <div class="col-lg-2 star-start">{{star.start}}</div>
+    <div class="col-lg-2 star-end">{{star.end}}</div>
+    <div class="col-lg-2 star-titles">{{star.titles}}</div>
+</div>
+

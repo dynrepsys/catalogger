@@ -1,0 +1,10 @@
+<div class="row title" :class="{ sel: title.isSel, linked: title.isLinked }" @click="select(title.id, $event)">
+    <div class="col-lg-8 title-title">{{title.title}}
+        <a :href="extlink" target="_blank" v-if="title.titleid">
+            <span class="glyphicon glyphicon-new-window" style="font-size:.6em;color:#C0C0C0"></span>
+        </a>
+    </div>
+    <div class="col-lg-1 title-year">{{title.year}}</div>
+    <div class="col-lg-3 title-studio">{{title.studio}}</div>
+</div>
+

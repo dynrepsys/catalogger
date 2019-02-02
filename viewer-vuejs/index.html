@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" /> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/tagger.css">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/lodash@0.5.1/vendor/underscore/underscore-min.js"></script>
+    <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.js"integrity="sha256-oYqpLeqZe9cetUDV+TFiBZHp3uJ+X4F5eLs4W6uSTSE="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="/init.js"></script><!-- globals in server.js -->
+</head>
+<body>
+<div id="app" class="container">
+    <div class="col-lg-6 pane">
+        <file-nav></file-nav>
+        <volumes></volumes>
+        <file-footer></file-footer>
+    </div>
+    <div class="col-lg-6 pane">
+        <tag-nav></tag-nav>
+        <div id="tables">
+            <ext-titles></ext-titles>
+            <int-titles></int-titles>
+            <ext-stars></ext-stars>
+            <int-stars></int-stars>
+            <div style="display:none;" id="tags-venn"></div><!-- must be declared here or d3 cant find it even in mounted() -->
+            <all-tags></all-tags>
+            <file-tags></file-tags>
+            <tags-venn></tags-venn>
+        </div>
+        <tag-footer></tag-footer>
+    </div>
+</div>
+<script type="text/javascript" src="js/venn.js"></script>
+<script type="text/javascript" src="html/tag-nav.html"></script>
+<script type="text/javascript" src="js/tag-nav.js"></script>
+<script type="text/javascript" src="html/tag-footer.html"></script>
+<script type="text/javascript" src="js/tag-footer.js"></script>
+<script type="text/javascript" src="html/ext-title.html"></script>
+<script type="text/javascript" src="js/ext-title.js"></script>
+<script type="text/javascript" src="html/ext-titles.html"></script>
+<script type="text/javascript" src="js/ext-titles.js"></script>
+<script type="text/javascript" src="html/int-title.html"></script>
+<script type="text/javascript" src="js/int-title.js"></script>
+<script type="text/javascript" src="html/int-titles.html"></script>
+<script type="text/javascript" src="js/int-titles.js"></script>
+<script type="text/javascript" src="html/ext-star.html"></script>
+<script type="text/javascript" src="js/ext-star.js"></script>
+<script type="text/javascript" src="html/ext-stars.html"></script>
+<script type="text/javascript" src="js/ext-stars.js"></script>
+<script type="text/javascript" src="html/int-star.html"></script>
+<script type="text/javascript" src="js/int-star.js"></script>
+<script type="text/javascript" src="html/int-stars.html"></script>
+<script type="text/javascript" src="js/int-stars.js"></script>
+<script type="text/javascript" src="html/tags-venn.html"></script>
+<script type="text/javascript" src="js/tags-venn.js"></script>
+<script type="text/javascript" src="html/all-tags.html"></script>
+<script type="text/javascript" src="js/all-tags.js"></script>
+<script type="text/javascript" src="html/tag.html"></script>
+<script type="text/javascript" src="js/tag.js"></script>
+<script type="text/javascript" src="html/file-tag.html"></script>
+<script type="text/javascript" src="js/file-tag.js"></script>
+<script type="text/javascript" src="html/file-tags.html"></script>
+<script type="text/javascript" src="js/file-tags.js"></script>
+<script type="text/javascript" src="html/file-nav.html"></script>
+<script type="text/javascript" src="js/file-nav.js"></script>
+<script type="text/javascript" src="html/file-footer.html"></script>
+<script type="text/javascript" src="js/file-footer.js"></script>
+<script type="text/javascript" src="html/file.html"></script>
+<script type="text/javascript" src="js/file.js"></script>
+<script type="text/javascript" src="html/dir.html"></script>
+<script type="text/javascript" src="js/dir.js"></script>
+<script type="text/javascript" src="html/volume.html"></script>
+<script type="text/javascript" src="js/volume.js"></script>
+<script type="text/javascript" src="html/volumes.html"></script>
+<script type="text/javascript" src="js/volumes.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
+

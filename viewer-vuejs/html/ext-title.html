@@ -1,0 +1,8 @@
+<div class="row title" :class="{ sel: title.isSel, indb: title.inDb }" @click="select(title.id, $event)">
+    <div class="col-lg-8 title-title">
+        <a :href="extlink" target="_blank">{{title.title}}</a>
+    </div>
+    <div class="col-lg-1 title-year">{{title.year}}</div>
+    <div class="col-lg-3 title-studio">{{title.studio}}</div>
+</div>
+

@@ -1,0 +1,21 @@
+<footer class="footer">
+    <div class="container-fluid">
+        <div style="float:left">
+            <span class="glyphicon glyphicon-text-size mini-glyph"></span>:
+            <span v-show="selectedIntTitle >= 0">{{selectedIntTitle}}</span>&nbsp;
+            <span class="glyphicon glyphicon-star mini-glyph"></span>:
+            <span v-show="selectedIntStar >= 0">{{selectedIntStar}}</span>&nbsp;
+            <span class="glyphicon glyphicon-tag mini-glyph"></span>:
+            <span v-show="selectedFileTag >= 0">{{selectedFileTag}}</span>
+        </div>
+        <div style="float:right">
+            <span class="glyphicon glyphicon-text-size mini-glyph"></span>:
+            <span v-show="selectedExtTitles.length">{{selectedExtTitles}}</span>&nbsp;
+            <span class="glyphicon glyphicon-star mini-glyph"></span>:
+            <span v-show="selectedExtStars.length">{{selectedExtStars}}</span>&nbsp;
+            <span class="glyphicon glyphicon-tag mini-glyph"></span>:
+            <span v-show="selectedTags.length">{{selectedTags}}</span>
+        </div>
+    </div>
+</footer>
+

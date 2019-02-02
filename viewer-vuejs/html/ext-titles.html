@@ -1,0 +1,13 @@
+<div class="container table-top titles" v-if="show">
+    <div class="row titles-head">
+        <div class="col-lg-8 title-title" @click="setSort(0, $event)"> Movie<span :class="sortGlyph(0)"></span></div>
+        <div class="col-lg-1 title-year" @click="setSort(1, $event)">Year<span :class="sortGlyph(1)"></span></div>
+        <div class="col-lg-3 title-studio">Studio</div>
+    </div>
+    <div class="row titles-body" style="height: calc(100% - 20px)">
+        <div class="col-lg-12" style="padding:0">
+            <ext-title v-for="(title, index) in sortedResults" :title="title" :index="index" :key="index"></ext-title>
+        </div>
+    </div>
+</div>
+

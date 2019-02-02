@@ -1,0 +1,11 @@
+<div class="container table-top tags" v-if="show">
+    <div class="row tags-head">
+        <div class="col-lg-12">Name</div>
+    </div>
+    <div class="row tags-body" style="height: calc(100% - 20px)">
+        <div class="col-lg-12" style="padding:0">
+            <tag v-for="(tag, index) in filteredTags" :tag="tag" :index="index" :key="index"></tag>
+        </div>
+    </div>
+</div>
+

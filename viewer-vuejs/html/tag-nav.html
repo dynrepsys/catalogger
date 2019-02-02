@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-right">
+    <div class="container-fluid nav-container">
+        <ul class="navbar-nav nav navbar-left form-group">
+            <li role="presentation" :class="{ active: (mode == 'titles') }"><a @click="setMode('titles')">&nbsp;<span class="glyphicon glyphicon-text-size"></span>&nbsp;</a></li>
+            <li role="presentation" :class="{ active: (mode == 'stars') }"><a @click="setMode('stars')">&nbsp;<span class="glyphicon glyphicon-star"></span>&nbsp;</a></li>
+            <li role="presentation" :class="{ active: (mode == 'tags') }"><a @click="setMode('tags')">&nbsp;<span class="glyphicon glyphicon-tag"></span>&nbsp;</a></li>
+        </ul>
+        <div class="navbar-form navbar-left form-group" v-if="mode=='titles'">
+            <input type="text" class="form-control" v-model="titleSearch" style="width:auto;" placeholder="Search titles..." @keyup.enter="searchTitles" @keyup="filterTitles">
+        </div>
+        <div class="navbar-form navbar-left form-group" v-if="mode=='stars'">
+            <input type="text" class="form-control" v-model="starSearch" style="width:auto;" placeholder="Search stars..." @keyup.enter="searchStars" @keyup="filterStars">
+        </div>
+        <div class="navbar-form navbar-left form-group" v-if="mode=='tags'">
+            <input type="text" class="form-control" v-model="tagSearch" style="width:auto;" placeholder="Search tags..." @keyup="filterTags">
+        </div>
+        <div class="navbar-form navbar-right form-group" v-if="mode=='titles'">
+            <button type="button" class="btn btn-sm btn-default" @click="importTitles">
+                Import <span class="glyphicon glyphicon-text-size"></span>
+            </button>
+            <button type="button" class="btn btn-sm btn-default" @click="linkTitle">
+                Link <span class="glyphicon glyphicon-text-size"></span>
+            </button>
+        </div>
+        <div class="navbar-form navbar-right form-group" v-if="mode=='stars'">
+            <button type="button" class="btn btn-sm btn-default" @click="importStars">
+                Import <span class="glyphicon glyphicon-star"></span>
+            </button>
+            <button type="button" class="btn btn-sm btn-default" @click="linkStar">
+                Link <span class="glyphicon glyphicon-star"></span>
+            </button>
+        </div>
+        <div class="navbar-form navbar-right form-group" v-if="mode=='tags'">
+            <button type="button" class="btn btn-sm btn-default" @click="linkTag">
+                Tag <span class="glyphicon glyphicon-tag"></span>
+            </button>
+            <button type="button" class="btn btn-sm btn-default" @click="unlinkTag">
+                Untag <span class="glyphicon glyphicon-tag"></span>
+            </button>
+        </div>
+    </div>
+</nav>
+

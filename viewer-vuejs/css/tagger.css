@@ -1,0 +1,188 @@
+html {
+}
+
+body {
+    xline-height: 2.3;
+}
+
+div#app {
+    width: 100%;
+    margin: 0;
+}
+
+div#app, div.pane {
+    height: 100%;
+    padding: 0;
+}
+
+nav {
+    line-height: 2.3;
+}
+
+.navbar {
+    margin-bottom: 4px;
+    width: 50%;
+}
+
+.navbar-right {
+    left: 50%;
+}
+
+div.nav-container {
+    padding-left: 0;
+}
+
+div#volumes {
+    height: calc(100% - 70px);
+    position: relative;
+    top: 50px;
+    overflow-y: auto;
+}
+
+div#tables {
+    height: calc(100% - 70px);
+    position: relative;
+    top: 50px;
+}
+
+div.vol, div.dir {
+    margin-left: 20px;
+    cursor: pointer; 
+}
+
+span.notinvol, span.notindir {
+    color: silver;
+}
+
+div.file {
+    margin-left: 20px;
+    cursor: default;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+span.filename {
+    cursor: pointer;
+}
+
+div.file:hover {
+    background-color: #ffd9d4; 
+}
+
+div.del { color: red; }
+
+div.subd { color: purple; }
+
+div.clip { color: orange; }
+
+div.sel {
+    background-color: #ffe9e4; 
+}
+
+span.titled { 
+    font-weight: bold;
+}
+
+div.table-top {
+    height: 50%;
+}
+
+div.table-bottom {
+    top: 50%;
+}
+
+.glyphicon-triangle-top, .glyphicon-triangle-bottom {
+    font-size: .6em;
+}
+
+div.titles, div.stars, div.tags {
+    width:100%;
+    padding:0;
+    cursor: default; 
+}
+
+div.titles-head, div.stars-head, div.tags-head {
+    font-weight: bold;
+    border-bottom: 2px solid silver;
+    margin: 0;
+}
+
+div.titles-body, div.stars-body, div.tags-body {
+    overflow-y: auto;
+    height: calc(50% - 20px); /*???*/
+    margin: 0;
+}
+
+div.stars-body {
+    xheight: calc(100% - 20px);
+}
+
+div.title, div.star, div.tag {
+    overflow-x: hidden;
+    margin: 0; 
+    z-index: 1000;
+}
+
+div.row.title:hover {
+    background-color: #c4e1f2;
+}
+
+div.star:hover {
+    background-color: #c4e1f2;
+}
+
+div.title.sel, div.star.sel, div.tag.sel {
+    background-color: #d4f1f2;
+}
+
+div.title.indb, div.star.indb {
+    color: silver;
+}
+
+div.title.linked, div.star.linked {
+    font-weight: bold;
+}
+
+div.title-title {
+    padding-left: 0px;
+}
+
+div.title-title a, div.star-name a {
+    color: inherit;
+}
+
+div.title-year {
+    white-space: nowrap;
+}
+
+div.title-studio {
+    padding-right: 0px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+div.star-name {
+    padding-left: 0px;
+}
+
+div.star-start, div.star-end {
+    white-space: nowrap;
+}
+
+div.star-titles {
+    padding-right: 0px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    height: 20px;
+    background-color: #f5f5f5;
+}
+
+.mini-glyph {
+   font-size: 12px; 
+}

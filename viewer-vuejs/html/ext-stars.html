@@ -1,0 +1,15 @@
+<div class="container table-top stars" v-if="show">
+    <div class="row stars-head">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5 star-name" @click="setSort(0, $event)">Name<span :class="sortGlyph(0)"></span></div>
+        <div class="col-lg-2 star-start" @click="setSort(1, $event)">Start<span :class="sortGlyph(1)"></span></div>
+        <div class="col-lg-2 star-end" @click="setSort(2, $event)">End<span :class="sortGlyph(2)"></span></div>
+        <div class="col-lg-2 star-titles" @click="setSort(3, $event)">Titles<span :class="sortGlyph(3)"></span></div>
+    </div>
+    <div class="row stars-body" style="height: calc(100% - 20px)">
+        <div class="col-lg-12" style="padding:0">
+            <ext-star v-for="(star, index) in sortedResults" :star="star" :index="index" :key="index"></ext-star>
+        </div>
+    </div>
+</div>
+

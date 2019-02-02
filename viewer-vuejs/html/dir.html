@@ -1,0 +1,5 @@
+<div class="dir" >
+    <span @click="toggle" :class="{ notindir : !containsFound }">{{dir.name}}</span>
+    <dir v-show="open" v-for="(dir, index) in dirs" :dir="dir" :key="dir.id"></dir>
+    <file v-show="open" v-for="(file, index) in filteredFiles" :file="file" :key="file.id" ></file>
+</div>

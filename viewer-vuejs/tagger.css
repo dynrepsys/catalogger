@@ -1,0 +1,133 @@
+html {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    padding-top: 54px;
+    height: 100%;
+}
+
+div#app {
+    display: flex;
+}
+
+div#files {
+    width: 50%;
+    height: 100%;
+    xborder: 2px dashed blue;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+}
+
+.vol {
+    margin-left: 10px;
+    cursor: pointer; 
+}
+
+.file {
+    margin-left: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.file:hover {
+    background-color: #ffd9d4; 
+}
+
+.del {
+    color: red;
+}
+
+.subd {
+    color: purple;
+}
+
+.clip {
+    color: orange;
+}
+
+.titled { 
+    font-weight: bold;
+}
+
+.sel {
+    background-color: #ffe9e4; 
+}
+
+div#titles {
+    width: 50%;
+    padding-left: 4px;
+    height: 100%;
+    cursor: default;
+}
+
+.navbar: {
+    margin-bottom: 10px;
+}
+
+.glyphicon-triangle-top, .glyphicon-triangle-bottom {
+    font-size: .6em;
+}
+
+div.titles {
+    width:100%;
+    padding:0;
+}
+
+div.titles-head {
+    font-weight: bold;
+    border-bottom: 2px solid silver;
+    margin: 0;
+}
+
+div.titles-body {
+    overflow-y: auto;
+    height: calc(50% - 60px);
+    margin: 0;
+}
+
+div.title {
+    overflow-x: hidden;
+    margin: 0; 
+}
+
+div.title:hover {
+    background-color: #c4e1f2;
+}
+
+div.title.sel {
+    background-color: #d4f1f2;
+}
+
+div.title.indb {
+    color: silver;
+}
+
+div.title.linked {
+    font-weight: bold;
+}
+
+div.title-title {
+    padding-left: 0px;
+}
+
+div.title-year {
+    white-space: nowrap;
+}
+
+div.title-studio {
+    padding-right: 0px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  height: 60px;
+  background-color: #f5f5f5;
+}

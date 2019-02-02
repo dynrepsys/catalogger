@@ -1,0 +1,6 @@
+<div class="vol" >
+    <span @click="toggle" :class="{ notinvol : !containsFound }">{{vol.name}}</span>
+    <dir v-show="open && filter.mode == 'dir'" v-for="(dir, index) in dirs" :dir="dir" :key="dir.id"></dir>
+    <file v-show="open" v-for="(file, index) in filteredFiles" :file="file" :key="file.id"></file>
+</div>
+

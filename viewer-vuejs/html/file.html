@@ -1,0 +1,6 @@
+<div class="file" :class="{ sel: file.isSel, del: file.isDeleted, subd: file.isSubd, clip: file.isClip }" @click="select(file.id, $event)" >
+    <span class="filename" :class="{ titled: (file.title != null) }" @click="toggleFrames">{{prefName}}</span>&nbsp;<span class="glyphicon glyphicon-star mini-glyph" v-if="file.stars"></span>&nbsp;<span class="glyphicon glyphicon-tag mini-glyph" v-if="file.tags"></span>
+    <div style="overflow-x:auto" v-show="open" v-html="frameImgs"></div>
+    <div v-show="open" style="margin-bottom:8px;color:silver;">&nbsp;&nbsp;{{file.name}} ~{{Math.floor(frames.length/4)}}:{{frames.length%4*15}} {{file.md5}}<br/></div>
+</div>
+

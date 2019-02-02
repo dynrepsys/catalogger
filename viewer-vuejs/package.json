@@ -1,0 +1,24 @@
+{
+  "name": "tagger",
+  "version": "1.0.0",
+  "description": "temp",
+  "main": "server.js",
+  "engines": {
+    "node": ">=7.10.0"
+  },
+  "dependencies": {
+    "async-exec": "^1.1.0",
+    "co": "^4.6.0",
+    "co-sqlite3": "^0.1.3",
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "none",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
