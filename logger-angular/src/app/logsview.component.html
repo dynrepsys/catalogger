@@ -1,0 +1,13 @@
+<div>
+    <div *ngFor="let l of logs" (click)="openLog($event)" style="cursor:pointer;" title="{{l.name}}">
+        {{l.name}} 
+        <span style="color:gray;">&nbsp;{{l.startdir}}</span>
+        <span style="font-weight:bold;" *ngIf="l.total > 0">&nbsp;{{l.total}}</span>
+        <span style="color:gold;" *ngIf="l.warnings.length > 0">&nbsp;{{l.warnings}}</span>
+        <span style="color:red;" *ngIf="l.errors.length > 0">&nbsp;{{l.errors}}</span>
+        <span style="color:silver;">&nbsp;{{durStr(l)}} {{agoStr(l)}}</span>
+            <div *ngFor="let d of l.dirs">
+              <dir [mydir]="d"></dir>
+            </div>
+    </div>
+</div>
