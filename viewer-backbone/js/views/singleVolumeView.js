@@ -23,7 +23,6 @@ bpapp.singleVolumeView = Backbone.View.extend({
             this.$el.html(volumeTemplate);
         }
 
-        //this.$el.show();
         this.$el.css("color", "");
 
         var found = this.filter.get('found');
@@ -31,7 +30,6 @@ bpapp.singleVolumeView = Backbone.View.extend({
 
         if(found && !found.parents.includes(id)) {
             console.log(id, found, found.parents.includes(id));
-            //this.$el.hide();
             this.$el.css("color", 'silver');
         }
 
