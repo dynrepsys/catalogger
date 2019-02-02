@@ -37,7 +37,6 @@ var app = new Vue({
                 axios.post('/title?title=' + t.title + '&studio=' + t.studio + '&year=' + t.year + '&titleid=' + titleid + '&movieid=' + movieid)
                     .then(function(response) {
                         console.log('success', response);
-                        //vm.loadTitles();
                         Vue.set(t, 'inDb', true);
                         console.log('imported title', t);
                         bus.$emit('refresh-int-titles');
@@ -55,11 +54,8 @@ var app = new Vue({
             console.log(vm.linkFiles, vm.linkTitle);
             if(vm.linkFiles.length > 0 && vm.linkTitle) {
                 for(let f of vm.linkFiles) {
-                    //var filemd5 = md5;
                     axios.post('/filetitle?filemd5=' + f.md5 + '&titleid=' + vm.linkTitle.id)
                         .then(function(response) {
-                            //var onetitle = vm.titles.filter(function(title){ return title.id == vm.$parent.selectedTitles[0] });
-                            //bus.$emit('title-linked', { md5: md5, title: onetitle[0].title });
                             f.title = linkTitle.title;
                             console.log('link success', f, vm.linkTitle, response);
                         })
@@ -78,14 +74,11 @@ var app = new Vue({
         bus.$on('import-ext-stars', function() {
             console.log(vm.importStars);
             for(let s of vm.importStars) {
-                //var titleid = encodeURIComponent(t.url.split('/')[1].split('=')[1]);
-                //var movieid = t.buymovie.split('=')[1];
                 var perfid = s.url.split('/')[2].split('=')[1];
                 var perfname = s.url.split('/')[4].split('.')[0];
                 axios.post('/star?name=' + encodeURIComponent(s.name) + '&perfid=' + perfid + '&perfname=' + perfname + '&start=' + s.start + '&end=' + s.end + '&titles=' + s.titles + '&imgsrc=' + encodeURIComponent(s.img))
                     .then(function(response) {
                         console.log('success', response);
-                        //vm.loadTitles();
                         Vue.set(s, 'inDb', true);
                         console.log('imported star', s);
                         bus.$emit('refresh-int-stars');
