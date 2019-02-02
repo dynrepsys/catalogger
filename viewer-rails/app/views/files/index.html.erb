@@ -1,0 +1,17 @@
+<h1>Listing files</h1>
+
+<table>
+  <tr>
+    <th>MD5</th>
+    <th>Path</th>
+    <th>Name</th>
+  </tr>
+
+  <% @files.each do |file| %>
+    <tr>
+      <td><%= file.md5 %></td>
+      <td><%= file.path %></td>
+      <td><%= file.name %></td>
+    </tr>
+  <% end %>
+</table>
