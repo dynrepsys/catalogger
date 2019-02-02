@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/catalogApp.css">
+	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body style="">
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div id="filter">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <label>
+                            <input id="show-deleted" type="checkbox" value="" checked>
+                            deleted
+                        </label>
+                        <label>
+                            <input id="show-frames" type="checkbox" value="" checked>
+                            frames
+                        </label>
+                        <label>
+                            <input id="show-oldsubs" type="checkbox" value="" checked>
+                            sub&apos;d
+                        </label>
+                        <input type="text" id="search-text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+        </div>
+    </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="vols" id="allVolumes"></div>
+    </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div id="status">kumquat</div>
+        </div>
+    </footer>
+    <script id="volumeElement" type="text/template">
+        <span class="vol" tabindex="0"><a><%= name %></a></span>
+    </script>
+	<script id="directoryElement" type="text/template">
+        <span class="dir" tabindex="0"><a href="javascript:void(0)"><%= name %></a></span>
+    </script>
+	<script id="fileElement" type="text/template">
+        <span class="file" tabindex="0"><%= name %></span>
+    </script>
+	<script id="frameElement" type="text/template">
+        <img class="frame" src="<%= src %>">
+    </script>
+	<script src="js/models/singleVolume.js"></script>
+	<script src="js/models/singleDirectory.js"></script>
+	<script src="js/models/singleFile.js"></script>
+	<script src="js/models/singleFrame.js"></script>
+	<script src="js/views/singleVolumeView.js"></script>
+	<script src="js/views/allVolumesView.js"></script>
+	<script src="js/views/singleDirectoryView.js"></script>
+	<script src="js/views/allDirectoriesView.js"></script>
+	<script src="js/views/singleFileView.js"></script>
+	<script src="js/views/allFilesView.js"></script>
+	<script src="js/views/singleFrameView.js"></script>
+	<script src="js/views/allFramesView.js"></script>
+	<script src="js/collections/allVolumes.js"></script>
+	<script src="js/collections/allDirectories.js"></script>
+	<script src="js/collections/allFiles.js"></script>
+	<script src="js/collections/allFrames.js"></script>
+	<script src="js/routes/router.js"></script>
+	<script src="js/catalogApp.js"></script>
+</body>
+</html>
