@@ -24,7 +24,7 @@ Since each binary file has a unique hash, this, rather than the file's name, loc
 Since files are all stored in common file systems, which are in turn all based on trees, all archiving and retrieval technologies developed for this system are designed around recursive functions and relationships.
 
 ## Organization
-The sysetm is divided into basic areas of functionality:
+The system is divided into basic areas of functionality:
 * **database** The metadata store, which should be exportable and thus can be rebuilt from scratch using any relational database technology with zero loss of data
 * **images** Thumbnails of any suitable content, stored externally from the database as binary compressed images in subdirectories named for the orginating file hash
 * **etl** Scripts load and transform files, perform consistency checks and other file/directory-centric operations 
