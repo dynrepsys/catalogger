@@ -14,7 +14,7 @@ Secondary objectives:
 1. Actual files may depend only on file-system, compression, and encryption used; and metadata may only additionally dependent on generic SQL
 
 Tertiary objectives:
-1. Suppor volumes that are _dynamic_ as well as static, ie they are still being built and are subject to change, as opposed to being burned into media and effectively read-only
+1. Support volumes that are _dynamic_ as well as static, ie they are still being built and are subject to change, as opposed to being burned into media and effectively read-only
 1. Serve as a proving ground for new and emerging technolgies, platforms, and libraries
 1. Support end-to-end encryption, including of entire volumes
 
